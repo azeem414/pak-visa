@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A step-by-step guide to applying for a German student visa from Pakistan without an agent, with official sources and a scam check.">
+<title>Direct Route</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: one narrow column set like a visa application form. Mono field labels, a machine-readable-zone strip in the header, numbered steps because the order is real. */
+:root {
+  --bg: #EEF2F0;
+  --surface: #F9FBFA;
+  --ink: #14231E;
+  --muted: #4D5F58;
+  --line: #C5D1CC;
+  --accent: #0B6B4F;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #DCEEE6;
+  --warn: #8A4305;
+  --warn-bg: #FBEED6;
+  --danger: #9E2323;
+  --danger-bg: #F8E1DF;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1714;
+    --surface: #15221E;
+    --ink: #E4EEEA;
+    --muted: #9DB0A8;
+    --line: #2A3B35;
+    --accent: #52CBA0;
+    --accent-ink: #06241A;
+    --accent-soft: #123428;
+    --warn: #F0B15C;
+    --warn-bg: #2C2111;
+    --danger: #F08A84;
+    --danger-bg: #331A19;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1714;
+  --surface: #15221E;
+  --ink: #E4EEEA;
+  --muted: #9DB0A8;
+  --line: #2A3B35;
+  --accent: #52CBA0;
+  --accent-ink: #06241A;
+  --accent-soft: #123428;
+  --warn: #F0B15C;
+  --warn-bg: #2C2111;
+  --danger: #F08A84;
+  --danger-bg: #331A19;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-inline: 1rem;
+  padding-block: 1.5rem 3rem;
+}
+.page { max-width: 44rem; margin-inline: auto; display: flex; flex-direction: column; gap: 3rem; }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible, input:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+.label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* Header */
+.mrz {
+  font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.5; letter-spacing: 0.12em;
+  color: var(--muted); overflow: hidden; white-space: nowrap;
+  border-block: 1px dashed var(--line); padding-block: 0.5rem; user-select: none;
+}
+header { display: flex; flex-direction: column; gap: 1.25rem; }
+.brand { display: flex; flex-direction: column; gap: 0.75rem; }
+h1 { font-size: clamp(2rem, 6.5vw, 3.1rem); font-weight: 700; }
+.lede { font-size: 1.125rem; max-width: 36rem; color: var(--ink); }
+.jump { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn {
+  font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
+  background: var(--accent); color: var(--accent-ink); border: 2px solid var(--accent);
+  padding: 0.55rem 1rem; border-radius: 4px; display: inline-block;
+}
+.btn.ghost { background: transparent; color: var(--accent); }
+
+/* Field grid */
+.fields {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  border: 1px solid var(--line); background: var(--surface); margin: 0;
+}
+.field { padding: 0.8rem 1rem; display: flex; flex-direction: column; gap: 0.2rem; border-inline-end: 1px solid var(--line); border-block-end: 1px solid var(--line); margin-inline-end: -1px; margin-block-end: -1px; min-width: 0; }
+.field dt { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.field dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.field dd small { display: block; font-weight: 400; color: var(--muted); font-size: 0.8rem; line-height: 1.35; }
+.fields-wrap { overflow: hidden; }
+
+/* Steps */
+section { display: flex; flex-direction: column; gap: 1.25rem; }
+h2 { font-size: clamp(1.5rem, 4.5vw, 2rem); font-weight: 700; }
+.intro { color: var(--muted); max-width: 38rem; }
+ol.steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: flex; flex-direction: column; gap: 0; }
+.step { counter-increment: step; display: grid; grid-template-columns: 2.75rem minmax(0, 1fr); gap: 0 0.75rem; padding-block: 1.5rem; border-top: 1px solid var(--line); }
+.step:last-child { border-bottom: 1px solid var(--line); }
+.step::before {
+  content: counter(step, decimal-leading-zero); font-family: var(--font-mono); font-weight: 500;
+  color: var(--accent); font-size: 1.05rem; padding-top: 0.2rem;
+}
+.step-body { display: flex; flex-direction: column; gap: 0.7rem; min-width: 0; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+.step ul { margin: 0; padding-inline-start: 1.15rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.src { font-family: var(--font-mono); font-size: 0.74rem; color: var(--muted); line-height: 1.5; }
+.src a { color: var(--muted); }
+.note { background: var(--accent-soft); padding: 0.7rem 0.9rem; border-radius: 4px; font-size: 0.95rem; }
+.note.warn { background: var(--warn-bg); color: var(--ink); border-inline-start: 3px solid var(--warn); border-radius: 2px; }
+
+/* Scam check */
+.check { background: var(--surface); border: 1px solid var(--line); padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.check fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.check legend { padding: 0; margin-bottom: 0.6rem; }
+.flag { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: 0.65rem; align-items: start; padding: 0.6rem 0.7rem; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; background: var(--bg); }
+.flag:has(input:checked) { border-color: var(--warn); background: var(--warn-bg); }
+.flag input { width: 1.2rem; height: 1.2rem; margin: 0.2rem 0 0; accent-color: var(--warn); }
+.flag span { min-width: 0; }
+.flag small { display: block; color: var(--muted); font-size: 0.85rem; line-height: 1.4; margin-top: 0.15rem; }
+.verdict { padding: 0.9rem 1rem; border-radius: 4px; font-weight: 500; background: var(--accent-soft); display: flex; flex-direction: column; gap: 0.35rem; }
+.verdict[data-level="mid"] { background: var(--warn-bg); }
+.verdict[data-level="high"] { background: var(--danger-bg); }
+.verdict strong { font-family: var(--font-display); font-size: 1.1rem; }
+.verdict span { font-weight: 400; }
+.reset { align-self: flex-start; }
+
+.sources { display: flex; flex-direction: column; gap: 0.4rem; margin: 0; padding-inline-start: 1.15rem; font-size: 0.95rem; }
+.sources li { overflow-wrap: anywhere; }
+footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+@media (max-width: 30rem) {
+  .step { grid-template-columns: 2rem minmax(0, 1fr); gap: 0 0.5rem; }
+}
+</style>
+
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="mrz" aria-hidden="true">V&lt;DEU&lt;&lt;STUDENT&lt;&lt;PAK&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</div>
+    <div class="brand">
+      <p class="label">Direct Route · Germany · Student visa · Pakistan</p>
+      <h1>Apply for your German student visa yourself</h1>
+      <p class="lede">The process has one government fee and no step that needs an agent. This guide walks through each step in order. Every fact names its official source and the date it was last checked.</p>
+    </div>
+    <div class="jump">
+      <a class="btn" href="#steps">Start the steps</a>
+      <a class="btn ghost" href="#scam-check">Check an agent's offer</a>
+    </div>
+    <div class="fields-wrap">
+      <dl class="fields">
+        <div class="field"><dt>Visa type</dt><dd>National visa (D)<small>For degree study</small></dd></div>
+        <div class="field"><dt>Money to show</dt><dd>€11,904<small>Blocked account, 2026</small></dd></div>
+        <div class="field"><dt>Visa fee</dt><dd>€75<small>The only government fee</small></dd></div>
+        <div class="field"><dt>Decision time</dt><dd>5–10 weeks<small>Embassy estimate for student visas</small></dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section id="steps" aria-labelledby="steps-h">
+    <h2 id="steps-h">Ten steps, in order</h2>
+    <p class="intro">Rules, fees and checklists change. Where a step names an amount or a document, confirm it on the embassy page before you act.</p>
+    <ol class="steps">
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Check which degree you can enter</h3>
+          <p>The Pakistani HSSC (Intermediate) is not treated as equivalent to the German Abitur, so the route depends on the level you want.</p>
+          <ul>
+            <li><strong>Bachelor's with an HSSC:</strong> either complete one year of undergraduate study at a Pakistani university in a related field, or attend a Studienkolleg in Germany and pass its entrance test (Feststellungsprüfung). The Studienkolleg needs basic German.</li>
+            <li><strong>Bachelor's with A levels:</strong> you can apply directly, depending on your subjects and their number.</li>
+            <li><strong>Master's:</strong> you need 16 years of education, for example a BS (Hons), B.Eng., M.A. or M.Sc.</li>
+          </ul>
+          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan, Getting started</a> · checked 13 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Choose your language route and take the test</h3>
+          <p>The language you need depends on the programme you pick. Read the language section of the programme's own page.</p>
+          <ul>
+            <li><strong>German-taught programmes:</strong> you must pass a German exam, usually at level C1, and sometimes B2. Accepted tests include TestDaF, DSH, Goethe and telc, but each programme names its own.</li>
+            <li><strong>English-taught programmes:</strong> you usually need IELTS or TOEFL. The required score is set per programme. IELTS 6.0 to 6.5 is common, and competitive programmes ask for more.</li>
+            <li>Some universities waive the English test if your earlier degree was taught in English. Each university sets its own policy, so ask before you pay for a test.</li>
+          </ul>
+          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan, Getting started</a> · checked 13 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Get your documents attested in Pakistan</h3>
+          <ul>
+            <li><strong>SSC and HSSC certificates:</strong> attested by the Inter Board Committee of Chairmen (IBCC)</li>
+            <li><strong>Bachelor's, Master's and MPhil/MS degrees and transcripts:</strong> attested by the Higher Education Commission (HEC)</li>
+            <li><strong>O and A level records:</strong> attested by the British Council Pakistan</li>
+          </ul>
+          <p>uni-assist asks for your school certificate with subjects and grades, your degree certificate with grades and the HEC stamps, and the minimum grade needed to pass the degree. Start early, because attestation can take weeks.</p>
+          <p class="note warn">Some sources say you also need a MOFA stamp, an apostille or an APS certificate. The DAAD Pakistan page and the embassy's document page do not list these. Ask your university or the embassy whether they apply to you before you pay for extra stamps.</p>
+          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan</a> · <a href="https://uni-assist.de/en/tools/info-country-by-country/details-country/country/pk">uni-assist, Pakistan</a> · <a href="https://pakistan.diplo.de/pk-en/service/legal-uess-1680522">German Embassy Islamabad, documents</a> · checked 13 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Get admitted to a German university</h3>
+          <p>The student visa requires admission to a state-recognised higher education institution in Germany. Apply through uni-assist if your university takes part in it, otherwise apply on the university's own website. uni-assist wants certified copies, not originals, and translations of any document that is not in English or German. It usually takes 4 to 6 weeks to evaluate your documents. Leading German universities do not process admissions through agents, according to a Minute Mirror report on German advice to Pakistani students.</p>
+          <p>If you have no admission yet, a separate visa for seeking a place in higher education exists. It allows up to nine months in Germany, and you need a school-leaving certificate that qualifies you for German university or a Studienkolleg.</p>
+          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · <a href="https://minutemirror.com.pk/pakistani-students-in-germany-rise-by-14pc-as-demand-for-foreign-education-grows-638824/">Minute Mirror</a> · checked 12 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Prove you can pay for your stay</h3>
+          <p>For 2026 the German government asks for at least €11,904, which is €992 a month for 12 months. You can show it with a blocked account, a scholarship, or a declaration of commitment (Verpflichtungserklärung) from a person living in Germany.</p>
+          <p>For a blocked account, you deposit the money into an account in your own name with a provider, and the provider sends you a confirmation letter for the embassy. Never send this money to a person.</p>
+          <p class="note warn">The embassy's own checklist PDFs are not all current. One still shows an old blocked-account amount of €10,236. Use only the checklist linked from the current study visa page.</p>
+          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad, study visa</a> · checked 12 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Gather your documents</h3>
+          <p>Embassy checklists for Pakistani applicants list items like these. Prepare them in the order the current checklist gives.</p>
+          <ul>
+            <li>Passport, plus copies of pages 1 and 2, and any earlier visas</li>
+            <li>The national visa application form and a biometric photo</li>
+            <li>Admission letter from the university</li>
+            <li>Proof of funds from step 2</li>
+            <li>Proof of valid health insurance</li>
+            <li>Language proof if your programme requires it, usually level B2. Check the current checklist for which certificates and test centres are accepted</li>
+            <li>CV, and a motivation letter if the checklist asks for one</li>
+            <li>School and university certificates with transcripts, attested as in step 3. The embassy's study visa page also asks for proof of tuition payment if your course charges tuition fees. Confirm on the current checklist whether any extra stamps are required</li>
+            <li>Details of any earlier visa refusals</li>
+          </ul>
+          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad</a> · checked 12 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Register on the consular portal and wait for an appointment</h3>
+          <p>Student visa applications start on the Federal Foreign Office's Consular Services Portal. The Islamabad embassy uses a waiting list: you register, and the mission allocates appointments later, in order of registration, as capacity allows. Only complete and correct data receives an appointment.</p>
+          <p>Applications go to the embassy in Islamabad or the consulate general in Karachi. Check the embassy page for which one covers your province. Do not email or phone to ask about your place in the queue, because the embassy asks applicants not to.</p>
+          <p><a href="https://digital.diplo.de/studium">Open the Consular Services Portal</a></p>
+          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad, study visa</a> · <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany</a> · checked 12 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Attend your appointment and pay the fee</h3>
+          <p>Visa applications can only be submitted in person. The national visa fee is €75. It is paid in cash in Pakistani rupees at the current exchange rate, so confirm the rupee amount on the day of your appointment.</p>
+          <p>There are no other government fees. If you apply through an official external service provider, that provider adds a service fee. Nobody can pay extra to improve the outcome.</p>
+          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/-/2208622">German Embassy Islamabad, general visa information</a> · checked 12 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>Wait for the decision</h3>
+          <p>The embassy gives five to ten weeks for student and work visa applications, depending on the category. When a decision is made, you are told to submit your passport for the visa. Check that your name, passport number and photo on the visa are correct.</p>
+          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/-/2208622">German Embassy Islamabad, general visa information</a> · checked 12 Oct 2026</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step-body">
+          <h3>After you arrive in Germany</h3>
+          <ul>
+            <li>Register your home address at the residents' registration office</li>
+            <li>Book an appointment with the local foreigners authority and apply for your residence permit before the entry visa expires</li>
+            <li>Take out new health insurance in Germany</li>
+            <li>Residence permits for study are usually issued for two years first, and can be renewed for two more if you have not finished</li>
+            <li>You may work up to 140 full days or 280 half days a year, or up to 20 hours a week</li>
+          </ul>
+          <p class="src">Source: <a href="https://make-it-in-germany.com/pdf-visa-studying">Make it in Germany, visa overview (Jan 2024)</a> · <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · checked 12 Oct 2026</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="scam-check" aria-labelledby="scam-h">
+    <h2 id="scam-h">Check an agent's offer before you pay</h2>
+    <p class="intro">If someone is offering to handle your visa, tick every statement that matches what they said or asked for. These are common fraud patterns, and each one conflicts with how the official process works.</p>
+    <form class="check" id="scam-form" onsubmit="return false">
+      <fieldset>
+        <legend class="label">What did they offer or ask for?</legend>
+        <label class="flag"><input type="checkbox" id="f1"><span>They guarantee the visa will be approved<small>Only the embassy's visa section decides. Nobody outside it can promise a result.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f2"><span>They ask for a large payment to "arrange" or "process" the visa<small>The only government fee is the visa fee, paid at your appointment.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f3"><span>They sell you an appointment slot or promise to skip the waiting list<small>Appointments are allocated by the embassy, in order of registration.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f4"><span>They hand you an admission letter, bank letter or appointment email you did not get directly from the university, the provider or the portal<small>Documents should come from the issuer, to an email address you control.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f5"><span>They want your passport, your portal login or your email password<small>You register and apply in your own name. Nobody needs your password.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f6"><span>They say you must pay the blocked-account money to them or to a personal account<small>The money goes into an account in your own name at the provider.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f7"><span>You cannot see your application on the university's own website<small>Ask to log in to the university portal yourself.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f8"><span>They push you to pay today, or refuse a written receipt or contract<small>Pressure and missing paperwork are standard signs of fraud.</small></span></label>
+      </fieldset>
+      <div class="verdict" id="verdict" role="status" aria-live="polite" data-level="none">
+        <strong id="verdict-title">Nothing ticked yet</strong>
+        <span id="verdict-text">Tick what applies. This page does not store or send your answers.</span>
+      </div>
+      <button type="button" class="btn ghost reset" id="reset">Clear all</button>
+    </form>
+    <p class="note warn">If you have already paid someone and you now suspect fraud, keep every message and receipt and report it to the FIA, Pakistan's Federal Investigation Agency. The Higher Education Commission has also warned students about fake agents who put counterfeit stamps on degrees and transcripts. Documents with fake stamps can be confiscated at HEC counters.</p>
+    <p class="src">Source: <a href="https://propakistani.pk/2020/12/08/hec-warns-students-about-fake-agents-for-degree-attestation/">ProPakistani on the HEC warning</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad</a> · checked 12 Oct 2026</p>
+  </section>
+
+  <section aria-labelledby="src-h">
+    <h2 id="src-h">Official sources</h2>
+    <ul class="sources">
+      <li><a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad: Visa for students</a></li>
+      <li><a href="https://pakistan.diplo.de/pk-en/service/-/2208622">German Embassy Islamabad: General visa information</a></li>
+      <li><a href="https://digital.diplo.de/studium">Federal Foreign Office: Consular Services Portal</a></li>
+      <li><a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany: Visa for studying</a></li>
+      <li><a href="https://www.daad.de/en/">DAAD: German Academic Exchange Service</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>This is an independent guide, not an official site and not legal advice. Rules, fees and appointment procedures change, so confirm every figure on the embassy page before you act.</p>
+    <p>Facts last checked 12 October 2026.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#scam-form input[type="checkbox"]'));
+  var verdict = document.getElementById('verdict');
+  var title = document.getElementById('verdict-title');
+  var text = document.getElementById('verdict-text');
+  function update() {
+    var n = boxes.filter(function (b) { return b.checked; }).length;
+    if (n === 0) {
+      verdict.setAttribute('data-level', 'none');
+      title.textContent = 'Nothing ticked yet';
+      text.textContent = 'Tick what applies. This page does not store or send your answers.';
+    } else if (n < 3) {
+      verdict.setAttribute('data-level', 'mid');
+      title.textContent = n + (n === 1 ? ' warning sign' : ' warning signs');
+      text.textContent = 'Pause before paying. Check each point yourself on the university site and the embassy page.';
+    } else {
+      verdict.setAttribute('data-level', 'high');
+      title.textContent = n + ' warning signs';
+      text.textContent = 'Do not pay. This matches common visa fraud. Apply yourself using the steps above.';
+    }
+  }
+  boxes.forEach(function (b) { b.addEventListener('change', update); });
+  document.getElementById('reset').addEventListener('click', function () {
+    boxes.forEach(function (b) { b.checked = false; });
+    update();
+  });
+  update();
+})();
+</script>
+</body>
+</html>
