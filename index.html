@@ -144,6 +144,24 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 .sources { display: flex; flex-direction: column; gap: 0.4rem; margin: 0; padding-inline-start: 1.15rem; font-size: 0.95rem; }
 .sources li { overflow-wrap: anywhere; }
 footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+
+/* Quick navigation */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+#top, #steps, #scam-check, #sources { scroll-margin-top: 4rem; }
+.quicknav {
+  position: sticky; top: 0; z-index: 10; margin-bottom: -2rem;
+  margin-inline: -1rem; padding-inline: 1rem;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; gap: 0.25rem; overflow-x: auto;
+}
+.quicknav a {
+  font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; white-space: nowrap;
+  padding: 0.85rem 0.75rem; border-block-end: 2px solid transparent;
+}
+.quicknav a:hover { color: var(--accent); border-block-end-color: var(--accent); }
+.quicknav a.top { margin-inline-start: auto; }
 @media (max-width: 30rem) {
   .step { grid-template-columns: 2rem minmax(0, 1fr); gap: 0 0.5rem; }
 }
@@ -153,12 +171,18 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
 </head>
 <body>
 <div class="page">
-  <header>
+  <nav class="quicknav" aria-label="Page sections">
+    <a href="#steps">Steps</a>
+    <a href="#scam-check">Scam check</a>
+    <a href="#sources">Sources</a>
+    <a href="#top" class="top">Top ↑</a>
+  </nav>
+  <header id="top">
     <div class="mrz" aria-hidden="true">V&lt;DEU&lt;&lt;STUDENT&lt;&lt;PAK&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</div>
     <div class="brand">
       <p class="label">Direct Route · Germany · Student visa · Pakistan</p>
       <h1>Apply for your German student visa yourself</h1>
-      <p class="lede">The process has one government fee and no step that needs an agent. This guide walks through each step in order. Every fact names its official source and the date it was last checked.</p>
+      <p class="lede">The visa itself has one embassy fee, and no step needs an agent. Other costs, such as language tests, document attestation and the blocked account, are paid to the organisations that provide them. This guide walks through each step in order and names its source. Last reviewed 13 October 2026.</p>
     </div>
     <div class="jump">
       <a class="btn" href="#steps">Start the steps</a>
@@ -168,7 +192,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
       <dl class="fields">
         <div class="field"><dt>Visa type</dt><dd>National visa (D)<small>For degree study</small></dd></div>
         <div class="field"><dt>Money to show</dt><dd>€11,904<small>Blocked account, 2026</small></dd></div>
-        <div class="field"><dt>Visa fee</dt><dd>€75<small>The only government fee</small></dd></div>
+        <div class="field"><dt>Visa fee</dt><dd>€75<small>The only embassy fee</small></dd></div>
         <div class="field"><dt>Decision time</dt><dd>5–10 weeks<small>Embassy estimate for student visas</small></dd></div>
       </dl>
     </div>
@@ -188,7 +212,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
             <li><strong>Bachelor's with A levels:</strong> you can apply directly, depending on your subjects and their number.</li>
             <li><strong>Master's:</strong> you need 16 years of education, for example a BS (Hons), B.Eng., M.A. or M.Sc.</li>
           </ul>
-          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan, Getting started</a> · checked 13 Oct 2026</p>
+          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan, Getting started</a></p>
         </div>
       </li>
 
@@ -201,7 +225,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
             <li><strong>English-taught programmes:</strong> you usually need IELTS or TOEFL. The required score is set per programme. IELTS 6.0 to 6.5 is common, and competitive programmes ask for more.</li>
             <li>Some universities waive the English test if your earlier degree was taught in English. Each university sets its own policy, so ask before you pay for a test.</li>
           </ul>
-          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan, Getting started</a> · checked 13 Oct 2026</p>
+          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan, Getting started</a></p>
         </div>
       </li>
 
@@ -215,7 +239,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
           </ul>
           <p>uni-assist asks for your school certificate with subjects and grades, your degree certificate with grades and the HEC stamps, and the minimum grade needed to pass the degree. Start early, because attestation can take weeks.</p>
           <p class="note warn">Some sources say you also need a MOFA stamp, an apostille or an APS certificate. The DAAD Pakistan page and the embassy's document page do not list these. Ask your university or the embassy whether they apply to you before you pay for extra stamps.</p>
-          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan</a> · <a href="https://uni-assist.de/en/tools/info-country-by-country/details-country/country/pk">uni-assist, Pakistan</a> · <a href="https://pakistan.diplo.de/pk-en/service/legal-uess-1680522">German Embassy Islamabad, documents</a> · checked 13 Oct 2026</p>
+          <p class="src">Source: <a href="https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/">DAAD Pakistan</a> · <a href="https://uni-assist.de/en/tools/info-country-by-country/details-country/country/pk">uni-assist, Pakistan</a> · <a href="https://pakistan.diplo.de/pk-en/service/legal-uess-1680522">German Embassy Islamabad, documents</a></p>
         </div>
       </li>
 
@@ -224,7 +248,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
           <h3>Get admitted to a German university</h3>
           <p>The student visa requires admission to a state-recognised higher education institution in Germany. Apply through uni-assist if your university takes part in it, otherwise apply on the university's own website. uni-assist wants certified copies, not originals, and translations of any document that is not in English or German. It usually takes 4 to 6 weeks to evaluate your documents. Leading German universities do not process admissions through agents, according to a Minute Mirror report on German advice to Pakistani students.</p>
           <p>If you have no admission yet, a separate visa for seeking a place in higher education exists. It allows up to nine months in Germany, and you need a school-leaving certificate that qualifies you for German university or a Studienkolleg.</p>
-          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · <a href="https://minutemirror.com.pk/pakistani-students-in-germany-rise-by-14pc-as-demand-for-foreign-education-grows-638824/">Minute Mirror</a> · checked 12 Oct 2026</p>
+          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · <a href="https://minutemirror.com.pk/pakistani-students-in-germany-rise-by-14pc-as-demand-for-foreign-education-grows-638824/">Minute Mirror</a></p>
         </div>
       </li>
 
@@ -234,7 +258,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
           <p>For 2026 the German government asks for at least €11,904, which is €992 a month for 12 months. You can show it with a blocked account, a scholarship, or a declaration of commitment (Verpflichtungserklärung) from a person living in Germany.</p>
           <p>For a blocked account, you deposit the money into an account in your own name with a provider, and the provider sends you a confirmation letter for the embassy. Never send this money to a person.</p>
           <p class="note warn">The embassy's own checklist PDFs are not all current. One still shows an old blocked-account amount of €10,236. Use only the checklist linked from the current study visa page.</p>
-          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad, study visa</a> · checked 12 Oct 2026</p>
+          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad, study visa</a></p>
         </div>
       </li>
 
@@ -253,7 +277,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
             <li>School and university certificates with transcripts, attested as in step 3. The embassy's study visa page also asks for proof of tuition payment if your course charges tuition fees. Confirm on the current checklist whether any extra stamps are required</li>
             <li>Details of any earlier visa refusals</li>
           </ul>
-          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad</a> · checked 12 Oct 2026</p>
+          <p class="src">Source: <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad</a></p>
         </div>
       </li>
 
@@ -263,7 +287,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
           <p>Student visa applications start on the Federal Foreign Office's Consular Services Portal. The Islamabad embassy uses a waiting list: you register, and the mission allocates appointments later, in order of registration, as capacity allows. Only complete and correct data receives an appointment.</p>
           <p>Applications go to the embassy in Islamabad or the consulate general in Karachi. Check the embassy page for which one covers your province. Do not email or phone to ask about your place in the queue, because the embassy asks applicants not to.</p>
           <p><a href="https://digital.diplo.de/studium">Open the Consular Services Portal</a></p>
-          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad, study visa</a> · <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany</a> · checked 12 Oct 2026</p>
+          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad, study visa</a> · <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany</a></p>
         </div>
       </li>
 
@@ -271,8 +295,8 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
         <div class="step-body">
           <h3>Attend your appointment and pay the fee</h3>
           <p>Visa applications can only be submitted in person. The national visa fee is €75. It is paid in cash in Pakistani rupees at the current exchange rate, so confirm the rupee amount on the day of your appointment.</p>
-          <p>There are no other government fees. If you apply through an official external service provider, that provider adds a service fee. Nobody can pay extra to improve the outcome.</p>
-          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/-/2208622">German Embassy Islamabad, general visa information</a> · checked 12 Oct 2026</p>
+          <p>The embassy charges no other fee. If you apply through an official external service provider, that provider adds a service fee. Nobody can pay extra to improve the outcome.</p>
+          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/-/2208622">German Embassy Islamabad, general visa information</a></p>
         </div>
       </li>
 
@@ -280,7 +304,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
         <div class="step-body">
           <h3>Wait for the decision</h3>
           <p>The embassy gives five to ten weeks for student and work visa applications, depending on the category. When a decision is made, you are told to submit your passport for the visa. Check that your name, passport number and photo on the visa are correct.</p>
-          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/-/2208622">German Embassy Islamabad, general visa information</a> · checked 12 Oct 2026</p>
+          <p class="src">Source: <a href="https://pakistan.diplo.de/pk-en/service/-/2208622">German Embassy Islamabad, general visa information</a></p>
         </div>
       </li>
 
@@ -294,7 +318,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
             <li>Residence permits for study are usually issued for two years first, and can be renewed for two more if you have not finished</li>
             <li>You may work up to 140 full days or 280 half days a year, or up to 20 hours a week</li>
           </ul>
-          <p class="src">Source: <a href="https://make-it-in-germany.com/pdf-visa-studying">Make it in Germany, visa overview (Jan 2024)</a> · <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a> · checked 12 Oct 2026</p>
+          <p class="src">Source: <a href="https://make-it-in-germany.com/pdf-visa-studying">Make it in Germany, visa overview (Jan 2024)</a> · <a href="https://www.make-it-in-germany.com/en/visa-residence/types/studying">Make it in Germany, Visa for studying</a></p>
         </div>
       </li>
     </ol>
@@ -307,7 +331,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
       <fieldset>
         <legend class="label">What did they offer or ask for?</legend>
         <label class="flag"><input type="checkbox" id="f1"><span>They guarantee the visa will be approved<small>Only the embassy's visa section decides. Nobody outside it can promise a result.</small></span></label>
-        <label class="flag"><input type="checkbox" id="f2"><span>They ask for a large payment to "arrange" or "process" the visa<small>The only government fee is the visa fee, paid at your appointment.</small></span></label>
+        <label class="flag"><input type="checkbox" id="f2"><span>They ask for a large payment to "arrange" or "process" the visa<small>The only fee the embassy charges is the visa fee, paid at your appointment.</small></span></label>
         <label class="flag"><input type="checkbox" id="f3"><span>They sell you an appointment slot or promise to skip the waiting list<small>Appointments are allocated by the embassy, in order of registration.</small></span></label>
         <label class="flag"><input type="checkbox" id="f4"><span>They hand you an admission letter, bank letter or appointment email you did not get directly from the university, the provider or the portal<small>Documents should come from the issuer, to an email address you control.</small></span></label>
         <label class="flag"><input type="checkbox" id="f5"><span>They want your passport, your portal login or your email password<small>You register and apply in your own name. Nobody needs your password.</small></span></label>
@@ -322,10 +346,10 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
       <button type="button" class="btn ghost reset" id="reset">Clear all</button>
     </form>
     <p class="note warn">If you have already paid someone and you now suspect fraud, keep every message and receipt and report it to the FIA, Pakistan's Federal Investigation Agency. The Higher Education Commission has also warned students about fake agents who put counterfeit stamps on degrees and transcripts. Documents with fake stamps can be confiscated at HEC counters.</p>
-    <p class="src">Source: <a href="https://propakistani.pk/2020/12/08/hec-warns-students-about-fake-agents-for-degree-attestation/">ProPakistani on the HEC warning</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad</a> · checked 12 Oct 2026</p>
+    <p class="src">Source: <a href="https://propakistani.pk/2020/12/08/hec-warns-students-about-fake-agents-for-degree-attestation/">ProPakistani on the HEC warning</a> · <a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad</a></p>
   </section>
 
-  <section aria-labelledby="src-h">
+  <section id="sources" aria-labelledby="src-h">
     <h2 id="src-h">Official sources</h2>
     <ul class="sources">
       <li><a href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104">German Embassy Islamabad: Visa for students</a></li>
@@ -338,7 +362,7 @@ footer { display: flex; flex-direction: column; gap: 0.6rem; color: var(--muted)
 
   <footer>
     <p>This is an independent guide, not an official site and not legal advice. Rules, fees and appointment procedures change, so confirm every figure on the embassy page before you act.</p>
-    <p>Facts last checked 12 October 2026.</p>
+    <p>Last reviewed 13 October 2026. Some figures come from secondary sources and could not be confirmed on the official page at that date, so treat every amount as a guide and confirm it before you pay.</p>
   </footer>
 </div>
 
